@@ -19,7 +19,9 @@ namespace SixPartAssignment
             }
             for(int i = 0; i < names.Length; i++)
             {
-                Console.WriteLine(names + userTxt);
+                string result = names + userTxt;
+                names[i] = result;
+                Console.WriteLine(result);
             }
 
             int j = 1;
@@ -37,7 +39,7 @@ namespace SixPartAssignment
             }
 
             int r = 1;
-            while (r <= 10) ;
+            while (r <= 10) 
             {
                 Console.WriteLine(r);
                 r++;
@@ -48,9 +50,9 @@ namespace SixPartAssignment
             string nameResult = Console.ReadLine();
             foreach(string name in newNames)
             {
-                if(newNames = nameResult)
+                if(name == nameResult)
                 {
-                    Console.WriteLine(newNames.LastIndexOf());
+                    Console.WriteLine(nameResult);
                 }
                 else
                 {
@@ -62,7 +64,7 @@ namespace SixPartAssignment
             Console.WriteLine("Enter one of the following: Cheese, Cake, Burger, Ham");
             string IdenticalResult = Console.ReadLine();
 
-            for (int i = 0; i < Identical.Count; i++) ;
+            for (int i = 0; i < Identical.Count; i++) 
             {
                 Console.WriteLine(IdenticalResult.Length);
                 Console.WriteLine("Your input is not in the list");
@@ -74,7 +76,7 @@ namespace SixPartAssignment
 
             foreach (string flavor in iceCream) 
             {
-                if (iceCream = iceCream)
+                if (flavor == iceCreamResult)
                 {
                     Console.WriteLine("That's in the list");
                 }
