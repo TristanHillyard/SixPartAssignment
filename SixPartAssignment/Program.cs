@@ -48,15 +48,11 @@ namespace SixPartAssignment
             List<string> newNames = new List<string> { "John", "Carl", "Liam", "Ian" };
             Console.WriteLine("Enter one of the following names: John, Carl, Liam, Ian");
             string nameResult = Console.ReadLine();
-            foreach(string name in newNames)
+            for(int i = 0; i < newNames.Count; i++)
             {
-                if(name == nameResult)
+                if (newNames.Contains(nameResult))
                 {
-                    Console.WriteLine(nameResult);
-                }
-                else
-                {
-                    Console.WriteLine("Your input is not in the list");
+                    Console.WriteLine(nameResult[i]);
                 }
             }
             
@@ -66,8 +62,14 @@ namespace SixPartAssignment
 
             for (int i = 0; i < Identical.Count; i++) 
             {
-                Console.WriteLine(IdenticalResult.Length);
-                Console.WriteLine("Your input is not in the list");
+                if (Identical.Contains(IdenticalResult))
+                {
+                    Console.WriteLine(IdenticalResult[i]);
+                }
+                else
+                {
+                    Console.WriteLine("Your input is not in the list");
+                }
             }
 
             List<string> iceCream = new List<string> { "Chocolate", "Vanilla", "Chocolate", "Cookie Dough" };
