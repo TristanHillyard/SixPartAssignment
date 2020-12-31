@@ -14,14 +14,11 @@ namespace SixPartAssignment
 
             for (int i = 0; i < names.Length; i++)
             {
-                string result = names + userTxt;
-                names[i] = result;
+                names[i] += userTxt;
             }
             for(int i = 0; i < names.Length; i++)
             {
-                string result = names + userTxt;
-                names[i] = result;
-                Console.WriteLine(result);
+                Console.WriteLine(names[i]);
             }
 
             int j = 1;
@@ -50,9 +47,9 @@ namespace SixPartAssignment
             string nameResult = Console.ReadLine();
             for(int i = 0; i < newNames.Count; i++)
             {
-                if (newNames.Contains(nameResult))
+                if (newNames[i] == nameResult)
                 {
-                    Console.WriteLine(nameResult[i]);
+                    Console.WriteLine("Match found for " + nameResult[i] + " at index" + i);
                 }
             }
             
@@ -62,27 +59,29 @@ namespace SixPartAssignment
 
             for (int i = 0; i < Identical.Count; i++) 
             {
-                if (Identical.Contains(IdenticalResult))
+                if (Identical[i] == (IdenticalResult))
                 {
-                    Console.WriteLine(IdenticalResult[i]);
+                    Console.WriteLine("Match found for " + IdenticalResult[i] + " at index " + i);
                 }
-                else
-                {
-                    Console.WriteLine("Your input is not in the list");
-                }
+            }
+            if(!Identical.Contains(IdenticalResult))
+            {
+                Console.WriteLine("This item does not exist in the list.");
             }
 
             List<string> iceCream = new List<string> { "Chocolate", "Vanilla", "Chocolate", "Cookie Dough" };
-            Console.WriteLine("Enter one of the following: Chocolate, Vanilla, Cookie Dough");
-            string iceCreamResult = Console.ReadLine();
 
-            foreach (string flavor in iceCream) 
+            for (int i = 0; i < iceCream.Count; i++)
             {
-                if (flavor == iceCreamResult)
+                for(int k = 0; k < i; k++)
                 {
-                    Console.WriteLine("That's in the list");
+                    if(iceCream[k] == iceCream[i])
+                    {
+                        Console.WriteLine(iceCream[k] + " has appeared in this list");
+                    }
                 }
             }
+            
         }
     }
 }
